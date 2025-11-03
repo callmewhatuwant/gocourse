@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	foo "net/http"
+	"io"
+)
+
+func main() {
+	fmt.Println("Hello, Standard Library")
+
+	resp, err := foo.Get("https://jsonplaceholder.typicode.com/posts/1")
+	if err != nil {
+		fmt.Println("Error: ", err)
+		return
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println("Error reading body:", err)
+		return
+	}
+	fmt.Println("HTTP Response Status:", resp.Status)
+	fmt.Println("Respone Body:")
+	fmt.Println(string(body))
+	defer resp.Body.Close()
+
+}
+
