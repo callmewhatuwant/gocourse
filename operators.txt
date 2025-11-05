@@ -1,0 +1,25 @@
+Logical Operators:
+
+! (logischer NOT)
+|| (logischer OR)
+&& (logischer AND)
+
+Bitwise Operators:
+
+& (bitweises AND)
+| (bitweises OR)
+^ (bitweises XOR)
+
+&&^ (bitweises Clearing, AND NOT)
+
+<< (Linksverschiebung)
+>> (Rechtsverschiebung)
+
+Comparison Operators:
+
+== (gleich)
+!= (ungleich)
+< (kleiner als)
+<= (kleiner oder gleich)
+> (größer als)
+>= (größer oder gleich)
