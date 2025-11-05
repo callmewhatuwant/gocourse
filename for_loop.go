@@ -22,18 +22,23 @@ func main() {
 	// 	}
 	// }
 
-	rows := 5
+	// rows := 5
 
-	for i := 1; i <= rows; i++ {
+	// for i := 1; i <= rows; i++ {
 
-		for j := 1; j <= rows-i; j++ {
-			fmt.Print(" ")
-		}
-		for k := 1; k <= 2*i-1; k++ {
-			fmt.Print("*")
-		}
-		fmt.Println() //move to next line
+	// 	for j := 1; j <= rows-i; j++ {
+	// 		fmt.Print(" ")
+	// 	}
+	// 	for k := 1; k <= 2*i-1; k++ {
+	// 		fmt.Print("*")
+	// 	}
+	// 	fmt.Println() //move to next line
 
+	// }
+
+	for i := range 10 {
+		fmt.Println(10 - i)
 	}
+	fmt.Println("We have a lift off")
 
 }
