@@ -41,4 +41,16 @@ func main() {
 		fmt.Printf("Value: %d\n", v)
 	}
 
+	array1 := [3]int{1, 2, 3}
+	array2 := [3]int{10, 2, 3}
+
+	fmt.Println(array1 == array2)
+
+	matrix := [3][3]int{
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9},
+	}
+	fmt.Println(matrix)
+
 }
