@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
 func main() {
 
@@ -30,7 +33,11 @@ func main() {
 	}
 	fmt.Println("Element at index 3:", slice1[3])
 
-	slice1[3] = 50
+	// slice1[3] = 50
 	fmt.Println("Element at index 3:", slice1[3])
+
+	if slices.Equal(slice1, sliceCopy) {
+		fmt.Println("slice1 is equal")
+	}
 
 }
