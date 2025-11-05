@@ -41,7 +41,7 @@ func main() {
 	// }
 
 	if 10%2 == 0 || 5%2 == 0 {
-		fmt.Println("Eihter Numbers are even")
+		fmt.Println("Eihter 10 or 5 are even")
 	}
 
 	if 10%2 == 0 && 6%2 == 0 {
