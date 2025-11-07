@@ -63,14 +63,14 @@ func main() {
 
 	var myMap4 map[string]string
 
-	if myMap4 == nil {
-		fmt.Println("The map is initialized to nil value.")
-	} else {
-		fmt.Println("The map is not initialized to nil value.")
-	}
+	// if myMap4 == nil {
+	// 	fmt.Println("The map is initialized to nil value.")
+	// } else {
+	// 	fmt.Println("The map is not initialized to nil value.")
+	// }
 
-	val := myMap4["key"]
-	fmt.Println(val)
+	// val := myMap4["key"]
+	// fmt.Println(val)
 
 	// myMap4["key"] = "Value"
 	// fmt.Println(myMap4)
@@ -80,5 +80,14 @@ func main() {
 
 	myMap4["key"] = "Value"
 	fmt.Println(myMap4)
+
+	fmt.Println("myMap length is", len(myMap))
+
+	myMap5 := make(map[string]map[string]string)
+
+	myMap5["map1"] = myMap4
+	fmt.Println(myMap5)
+
+
 
 }
