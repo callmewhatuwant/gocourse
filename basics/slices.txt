@@ -41,16 +41,17 @@ func main() {
 	}
 
 	towD := make([][]int, 3)
-	for i := 0; i<3; i++ {
+	for i := 0; i < 3; i++ {
 		innerLen := i + 1
-		towD[i] = make ([]int, innerLen)
-		for j := 0; j< innerLen; j++ {
+		towD[i] = make([]int, innerLen)
+		for j := 0; j < innerLen; j++ {
 			towD[i][j] = i + j
 		}
 	}
 
 	fmt.Println(towD)
 
-
-
+	slice2 := slice1[2:4]
+	fmt.Println("capacity of slice 2 is:", cap(slice2))
+	fmt.Println("The len of slice 2 is:", len(slice2))
 }
