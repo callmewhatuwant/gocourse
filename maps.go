@@ -43,24 +43,42 @@ func main() {
 	// fmt.Println(myMap)
 
 	// value, unkownvalue := myMap ["key1"]
-	_, unkownvalue := myMap ["key1"]
+	_, unkownvalue := myMap["key1"]
 	// fmt.Println(value)
 	fmt.Println(unkownvalue)
 
-
-	myMap2 := map[string]int{"a":1, "b":2}
-	myMap3 := map[string]int{"a":1, "b":2}
+	myMap2 := map[string]int{"a": 1, "b": 2}
+	myMap3 := map[string]int{"a": 1, "b": 2}
 	fmt.Println(myMap2)
 
-	if maps.Equal(myMap2,myMap3){
+	if maps.Equal(myMap2, myMap3) {
 		fmt.Println("map 1 and 2 are equal")
-	}else{
+	} else {
 		fmt.Println("maps are not equal")
 	}
 
-	for k,v := range myMap3{
-		fmt.Println(k,v)
+	for k, v := range myMap3 {
+		fmt.Println(k, v)
 	}
 
+	var myMap4 map[string]string
+
+	if myMap4 == nil {
+		fmt.Println("The map is initialized to nil value.")
+	} else {
+		fmt.Println("The map is not initialized to nil value.")
+	}
+
+	val := myMap4["key"]
+	fmt.Println(val)
+
+	// myMap4["key"] = "Value"
+	// fmt.Println(myMap4)
+	// use make to set values
+
+	myMap4 = make(map[string]string)
+
+	myMap4["key"] = "Value"
+	fmt.Println(myMap4)
 
 }
