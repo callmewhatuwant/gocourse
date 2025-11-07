@@ -40,4 +40,17 @@ func main() {
 		fmt.Println("slice1 is equal")
 	}
 
+	towD := make([][]int, 3)
+	for i := 0; i<3; i++ {
+		innerLen := i + 1
+		towD[i] = make ([]int, innerLen)
+		for j := 0; j< innerLen; j++ {
+			towD[i][j] = i + j
+		}
+	}
+
+	fmt.Println(towD)
+
+
+
 }
