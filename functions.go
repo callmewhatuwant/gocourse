@@ -28,8 +28,25 @@ func main() {
 
 	fmt.Println(result)
 
+	// Passing a function as an argument
+	result1 := applyOperation(1, 10, add)
+	fmt.Println(result1)
+
+	// Returning and using a function
+	result2 := createMultiplier(2)
+	fmt.Println("6*2 =", result2(6))
 }
 
 func add(a, b int) int {
 	return a + b
+}
+
+func applyOperation(x int, y int, operation func(int, int) int) int {
+	return operation(x, y)
+}
+
+func createMultiplier(factor int) func (int) int {
+	return func (x int) int {
+		return x * factor
+	}
 }
