@@ -15,7 +15,12 @@ func main() {
 }
 
 func process(input int) {
+
+	defer fmt.Println("Defferred 1")
+	defer fmt.Println("Defferred 2")
+
 	if input < 0 {
+		fmt.Println("Before Panic")
 		panic("input must be non-negative number")
 	}
 	fmt.Println("Processing input:", input)
