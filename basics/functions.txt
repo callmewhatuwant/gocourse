@@ -34,7 +34,7 @@ func main() {
 
 	// Returning and using a function
 	result2 := createMultiplier(2)
-	fmt.Println("6*2 =", result2(6))
+	fmt.Println("6 * 2 =", result2(6))
 }
 
 func add(a, b int) int {
