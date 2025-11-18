@@ -16,6 +16,10 @@ func main() {
 		firstName: "John",
 		lastName:  "Doe",
 		age:       30,
+		address: Adress{
+			city: "London",
+			country: "U.K.",
+		},
 	}
 
 	p1 := Person{
@@ -23,9 +27,15 @@ func main() {
 		age:       25,
 	}
 
+	p1.address.city = "New York"
+	p1.address.country = "USA"
+
+
 	fmt.Println(p.firstName)
 	fmt.Println(p1.firstName)
 	fmt.Println(p, p1)
+	fmt.Println(p.address.country)
+	fmt.Println(p1.address.country)
 
 	fmt.Println(user)
 
@@ -40,13 +50,19 @@ type Person struct {
 	firstName string
 	lastName  string
 	age       int
+	address   Adress
 }
 
-func (p Person) fullName() string{
+type Adress struct {
+	city    string
+	country string
+}
+
+func (p Person) fullName() string {
 	return p.firstName + " " + p.lastName
 }
 
-func (p *Person)  incrementAgeByOne(){
+func (p *Person) incrementAgeByOne() {
 	p.age++
-	
+
 }
