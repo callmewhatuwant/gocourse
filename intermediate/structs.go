@@ -12,37 +12,50 @@ func main() {
 		email:    "test@test.de",
 	}
 
-	p := Person{
+	p1 := Person{
 		firstName: "John",
 		lastName:  "Doe",
 		age:       30,
 		address: Adress{
-			city: "London",
+			city:    "London",
 			country: "U.K.",
+		},
+		PhoneHomeCell: PhoneHomeCell{
+			home: "2639295",
+			cell: "327698265",
 		},
 	}
 
-	p1 := Person{
+	p2 := Person{
 		firstName: "Jane",
 		age:       25,
 	}
 
-	p1.address.city = "New York"
-	p1.address.country = "USA"
+	p3 := Person{
+		firstName: "Jane",
+		age:       25,
+	}
 
+	//p2.address.city = "New York"
+	//p2.address.country = "USA"
 
-	fmt.Println(p.firstName)
 	fmt.Println(p1.firstName)
-	fmt.Println(p, p1)
-	fmt.Println(p.address.country)
+	fmt.Println(p2.firstName)
+	fmt.Println(p1, p2)
 	fmt.Println(p1.address.country)
+	fmt.Println(p2.address.country)
+	fmt.Println(p1.cell)
+	fmt.Println(p1.home)
 
 	fmt.Println(user)
 
-	fmt.Println(p.fullName())
+	fmt.Println(p1.fullName())
 
-	p1.incrementAgeByOne()
-	fmt.Println(p1.age)
+	// p2.incrementAgeByOne()
+	// fmt.Println(p2.age)
+
+	fmt.Println("Are p1 and p2 equal:", p1 == p2)
+	fmt.Println("Are p2 and p3 equal:", p2 == p3)
 
 }
 
@@ -51,6 +64,12 @@ type Person struct {
 	lastName  string
 	age       int
 	address   Adress
+	PhoneHomeCell
+}
+
+type PhoneHomeCell struct {
+	home string
+	cell string
 }
 
 type Adress struct {
