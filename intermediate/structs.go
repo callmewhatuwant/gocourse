@@ -31,6 +31,9 @@ func main() {
 
 	fmt.Println(p.fullName())
 
+	p1.incrementAgeByOne()
+	fmt.Println(p1.age)
+
 }
 
 type Person struct {
@@ -41,5 +44,9 @@ type Person struct {
 
 func (p Person) fullName() string{
 	return p.firstName + " " + p.lastName
+}
+
+func (p *Person)  incrementAgeByOne(){
+	p.age++
 	
 }
