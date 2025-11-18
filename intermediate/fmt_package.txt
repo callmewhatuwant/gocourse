@@ -4,13 +4,13 @@ import "fmt"
 
 func main()  {
 
-	fmt.Println("Hello")
-	fmt.Println("World!")
+	fmt.Print("Hello")
+	fmt.Print("World!")
 	fmt.Print(12, 456)
 
 	fmt.Println("Hello")
 	fmt.Println("World!")
-	fmt.Print(12, 456)
+	fmt.Println(12, 456)
 
 	name := "John"
 	age:=25
